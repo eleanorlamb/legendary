@@ -1,0 +1,6 @@
+$errorColor: map-get($foundation-palette, alert);
+$successColor: map-get($foundation-palette, success);
+
+.hidden {
+	display: none;
+}

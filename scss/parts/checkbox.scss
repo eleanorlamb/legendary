@@ -1,0 +1,25 @@
+.fancy-checkbox {
+	display: inline-block;
+	width: 1.25em;
+
+	&:before {
+		content: "\f096";
+		display: inline-block;
+		font-family: FontAwesome;
+		letter-spacing: 10px;
+	}
+
+	&.ban {
+		&:before {
+			color: $errorColor;
+			content: "\f00d";
+		}
+	}
+
+	&.require {
+		&:before {
+			color: $successColor;
+			content: "\f00c";
+		}
+	}
+}
