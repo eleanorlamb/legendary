@@ -1,5 +1,63 @@
+@import 'https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee|Just+Another+Hand';
+
 $errorColor: map-get($foundation-palette, alert);
 $successColor: map-get($foundation-palette, success);
+
+body {
+	background: url( ../img/bg.jpg ) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Just Another Hand', cursive;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.5rem;
+
+	&:after {
+		position: fixed;
+		content: " ";
+		display: block;
+		background: rgba( #EFEFEF, 0.25 );
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Bungee', cursive;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+label {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+select {
+	display: inline-block;
+	font-size: 1.5rem;
+	height: auto;
+	width: auto;
+}
+
+.body {
+	background: $white;
+	border-left: 3px solid $black; 
+	border-right: 3px solid $black; 
+	height: 2000px;
+}
 
 .hidden {
 	display: none;

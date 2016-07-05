@@ -1,5 +1,7 @@
 .hero {
-	font-size: 1.5rem;
+	&:hover {
+		cursor: pointer;
+	}
 
 	.name {
 		display: inline-block;
