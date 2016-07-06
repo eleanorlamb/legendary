@@ -28,13 +28,11 @@
 	}
 
 	.accordion-content {
-		padding-bottom: 3rem;
-
 		.reset {
-			position: absolute;
-			right: .5rem;
-			bottom: .25rem;
+			clear: both;
 			line-height: 1;
+			margin-right: .9875rem;
+			text-align: right;
 
 			a {
 				border-bottom: 0;
@@ -46,6 +44,11 @@
 			}
 		}
 	}
+}
+
+.is-active > .accordion-title::before {
+	content: '-';
+	padding-right: 10px;
 }
 
 .accordion-title {
