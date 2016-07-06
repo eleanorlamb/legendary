@@ -11,9 +11,12 @@
 
 <body>
 	<div class="row">
-		<div class="large-12 columns body">
-			<h1>Legendary Randomizer</h1>
+		<div class="large-12 columns header">
+			<h1>Legendary</h1>
+			<h3>Game Setup Tool</h3>
+		</div> <!-- .header -->
 
+		<div class="large-12 columns body">
 			<form id="randomizer">
 				<div class="row player-count">
 					<div class="medium-6 columns">
@@ -74,7 +77,7 @@
 			</div> <!-- .randomize -->
 
 			<div class="cookie-warning">
-				<span>Notice:</span> This site uses cookies to remember the options you select. Super heroes, teams, images, and content are property of Upper Deck and Marvel. If you don't have Legendary, you should <a href="http://upperdeckstore.com/legendary-a-marvel-deck-building-game.html" target="_blank">go buy it</a> now.
+				<span>Notice:</span> This site uses cookies to remember the options you select. Super heroes, teams, images, and content are property of Upper Deck and Marvel. This tool is in no way associated with Upper Deck or Marvel. If you don't have Legendary, you should <a href="http://upperdeckstore.com/legendary-a-marvel-deck-building-game.html" target="_blank">go buy it</a> now.
 			</div> <!-- .cookie-warning -->
 		</div> <!-- .body -->	
 	</div> <!-- .row -->
