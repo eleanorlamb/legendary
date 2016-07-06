@@ -33,3 +33,13 @@ $( '.hero' ).click( function() {
 		$( 'input[name="ban"]', this ).prop( 'checked', false );
 	}
 });
+
+
+$( '#hero-reset' ).click( function() {
+	$( '.hero' ).each( function() {
+		$( '.fancy-checkbox', this ).data( 'fancy-checkbox', 0 ).removeClass( 'ban' ).removeClass( 'require' );
+
+		$( 'input[name="require"]', this ).prop( 'checked', false );
+		$( 'input[name="ban"]', this ).prop( 'checked', false );		
+	});
+});

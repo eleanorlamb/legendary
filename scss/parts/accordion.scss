@@ -1,0 +1,63 @@
+.accordion-content {
+	color: $black;
+}
+
+.accordion-item {
+	border: 3px solid $black;
+	border-bottom: 0;
+	overflow: hidden;
+	position: relative;
+	
+	&:last-child {
+		border-bottom: 3px solid $black;
+
+		&:not(.is-active)>.accordion-title {
+			border-bottom: 3px solid $black;
+		}		
+	}
+
+	a {
+		font-size: 2rem;
+		font-weight: bold;
+		border-bottom: 3px solid $black;
+		color: $marvel;
+		margin-bottom: -3px;
+		span {
+			z-index: 5;
+		}
+	}
+
+	.accordion-content {
+		.reset {
+			position: absolute;
+			right: .5rem;
+			bottom: .25rem;
+			line-height: 1;
+
+			a {
+				border-bottom: 0;
+				text-transform: uppercase;
+			}
+
+			.fa {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+.accordion-title {
+	background-color: #eee;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.5) 5px, rgba(255,255,255,.5) 10px);	border: 0;
+
+	&:before {
+		font-size: 4rem;
+		margin-top: -2rem;
+	}
+
+	&:hover {
+		&:after {
+			opacity: 0;
+		}
+	}
+}
