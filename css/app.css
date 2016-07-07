@@ -5494,6 +5494,7 @@ select {
 
 .fancy-checkbox {
   display: inline-block;
+  vertical-align: middle;
   width: 1.25em;
 }
 
@@ -5544,6 +5545,15 @@ select {
 
 .hero .name {
   display: inline-block;
+}
+
+.hero .hero-icon {
+  display: inline-block;
+  width: 20px;
+}
+
+.hero .hero-icon img {
+  margin-top: -1px;
 }
 
 .accordion-content {

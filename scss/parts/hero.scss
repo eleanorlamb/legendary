@@ -6,4 +6,13 @@
 	.name {
 		display: inline-block;
 	}
+
+	.hero-icon {
+		display: inline-block;
+		width: 20px;
+
+		img {
+			margin-top: -1px;
+		}
+	}
 }

@@ -31,18 +31,18 @@ $setup[ 5 ][ 'bystanders' ] = 12;
 */
 function runQuery( $sql ) {
 	// Database Settings
-	$host = '127.0.0.1:33067';
-	$user = 'root';
-	$password = '';
+	$host = '127.0.0.1';
+	$user = 'legendary';
+	$password = 'nailPOLISH%%';
 	$database = 'legendary';
-
+/*
 	$host = 'localhost';
 	$user = 'legendary';
 	$password = 'nailPOLISH%%';
 	$database = 'legendary';
-
+*/
 	// Connect to the DB
-	$db = new mysqli( $host, $user, $password, $database );
+	$db = new mysqli( $host, $user, $password, $database, '33067' );
 
 	// Oh no! A connect_errno exists so the connection attempt failed!
 	if ($db->connect_errno) {

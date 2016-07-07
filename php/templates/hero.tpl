@@ -8,6 +8,14 @@
 	</div> <!-- .fancy-checkbox -->
 
 	<div class="name">
-		<?php echo $hero[ 'name' ]; ?>
+		<span class="hero-icon">
+			<?php if( $hero[ 'team' ] != 7 ): ?>
+				<img src="img/icons/teams/<?php echo $hero[ 'team' ] ?>.png">
+			<?php endif; ?>
+		</span>
+
+		<span class="hero-name">
+			<?php echo $hero[ 'name' ]; ?>
+		</span>
 	</div>
 </div> <!-- .hero -->
