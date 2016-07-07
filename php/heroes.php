@@ -1,5 +1,4 @@
 <?php
-
 // Load the DB Connection
 include_once( 'config.php' );
 

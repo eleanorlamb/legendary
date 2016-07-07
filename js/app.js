@@ -72,12 +72,12 @@ $( '#hero-reset' ).click( function() {
 */
 $( '#filter-content' ).click( function() {
 	// Start a blank string
-	var expansions = '';
+	var expansions = {};
 
 	// Loop through all of our checked expansions
-	$( '.expansion' ).each( function() {
+	$( '.expansion' ).each( function( index, element ) {
 		if( $( 'input[type="checkbox"]', this ).is( ':checked' ) ) {
-			expansions += $( this ).data( 'expansion' ) + ',';
+			expansions[ index ] = $( this ).data( 'expansion' );
 		}
 	});
 
@@ -97,7 +97,7 @@ $( '#randomize-button' ).click( function() {
 	$( this ).addClass( 'disabled' ).prop( 'disabled', true );
 
 	// Set the default to just having the base game
-	var expansions = '1';
+	var expansions = { 1: '1' };
 
 	// Is there an expansion cookie set?
 	if( Cookies.get( 'expansions' ) != undefined ) {
@@ -126,10 +126,10 @@ function initialLoad() {
 	console.log( '---------------' );
 
 	// Set the default to just having the base game
-	var expansions = '1';
+	var expansions = { 1: '1' };
 
 	// Is there an expansion cookie set?
-	if( Cookies.get( 'expansions' ) != undefined ) {
+	if( Cookies.get( 'expansion' ) != undefined ) {
 		expansions = Cookies.getJSON( 'expansion' );	
 	}
 

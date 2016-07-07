@@ -36,6 +36,11 @@ function runQuery( $sql ) {
 	$password = '';
 	$database = 'legendary';
 
+	$host = 'localhost';
+	$user = 'legendary';
+	$password = 'nailPOLISH%%';
+	$database = 'legendary';
+
 	// Connect to the DB
 	$db = new mysqli( $host, $user, $password, $database );
 
@@ -87,9 +92,9 @@ function stringify( $array ) {
 	$temp = '';
 
 	// Loop through all of the expansions in the array
-	for( $i = 0; $i < count( $array ); $i++) {
+	foreach( $array as $value ) {
 		// Smash this expansion onto the end of our string
-		$temp .= $array[ $i ] . ',';
+		$temp .= $value . ',';
 	}
 
 	// Remove the ending commma
