@@ -1,8 +1,5 @@
 <?php
 
-// Load the DB Connection
-include_once( 'cfg/config.php' );
-
 $setup[ 1 ][ 'heroes' ] = 3;
 $setup[ 1 ][ 'villains' ] = 4;
 $setup[ 1 ][ 'henchmen' ] = 2;
@@ -33,17 +30,9 @@ $setup[ 5 ][ 'bystanders' ] = 12;
 	Run a query
 */
 function runQuery( $sql ) {
-	// Database Settings
-	$host = '127.0.0.1';
-	$user = 'legendary';
-	$password = 'nailPOLISH%%';
-	$database = 'legendary';
-/*
-	$host = 'localhost';
-	$user = 'legendary';
-	$password = 'nailPOLISH%%';
-	$database = 'legendary';
-*/
+	// Load the DB Connection
+	include( 'cfg/config.php' );
+
 	// Connect to the DB
 	$db = new mysqli( $host, $user, $password, $database, '33067' );
 
