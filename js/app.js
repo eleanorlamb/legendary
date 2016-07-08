@@ -100,16 +100,28 @@ $( '#randomize-button' ).click( function() {
 	var expansions = { 1: '1' };
 
 	// Is there an expansion cookie set?
-	if( Cookies.get( 'expansions' ) != undefined ) {
+	if( Cookies.get( 'expansion' ) != undefined ) {
 		expansions = Cookies.getJSON( 'expansion' );	
 	}
 
 	var heroesRequire = Cookies.getJSON( 'hero-require' );
 	var heroesBan = Cookies.getJSON( 'hero-ban' );
 
+	$.post( 'php/schemes.php', { operation: 'new', expansions: expansions }, function( scheme ) {
+		$.post( 'php/villains.php', { operation: 'mastermind', expansions: expansions }, function( mastermind ) {
+			$( '#mastermind-result' ).html( mastermind.html );	
+
+			$.post( 'php/villains.php', { operation: 'villains', players: $( '#player-select' ).val(), expansions: expansions, schemeReq: scheme.villains, schemeVillains: scheme.required_villains, mastermind: mastermind.leads }, function( villains ) {
+				console.log( villains );
+				$( '#villains-result' ).html( villains.html );
+			}, 'json' );
+		}, 'json' );
+
+//		$( '#scheme-result' ).html( result.html );
+	}, 'json' );
+
 	$.post( 'php/heroes.php', { operation: 'generate', players: $( '#player-select' ).val(), expansions: expansions, heroRequire: heroesRequire, heroBan: heroesBan }, function( result ) {
 		$( '#heroes-result' ).html( result );
-		console.log( result );
 
 		$( '#randomize-button' ).removeClass( 'disabled' ).prop( 'disabled', false );
 	});

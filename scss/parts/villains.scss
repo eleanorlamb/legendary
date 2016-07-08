@@ -1,0 +1,10 @@
+.villains-wrapper {
+	background-color: #eee;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.25) 5px, rgba(255,255,255,.25) 10px);	border: 0;
+	border: 3px solid $black;
+	padding: 1rem;
+
+	h3 {
+		color: $marvel;
+	}
+}

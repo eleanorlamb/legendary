@@ -7,12 +7,72 @@
 		display: inline-block;
 	}
 
-	.hero-icon {
-		display: inline-block;
-		width: 20px;
+}
 
-		img {
-			margin-top: -1px;
-		}
+.hero-icon {
+	display: inline-block;
+	width: 20px;
+
+	img {
+		margin-top: -1px;
+	}
+}
+
+.hero-result {
+	span {
+		font-size: 2rem;
+	}
+
+	.hero-icon {
+		width: 35px;
+	}
+
+	.name {
+		display: inline-block;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.provides {
+		display: inline-block;
+	}
+
+	.stats {
+		display: none;
+	}
+}
+
+.heroes-wrapper {
+	background-color: #eee;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.25) 5px, rgba(255,255,255,.25) 10px);	border: 0;
+	border: 3px solid $black;
+	padding: 1rem;
+}
+
+.skill-icon {
+	display: inline-block;
+	text-align: center;
+	min-width: 30px;
+
+	&.high {
+		width: 40px;
+	}
+
+	&.low {
+		min-width: 20px;
+		width: 20px;
+	}
+
+	img {
+		margin-right: 1rem;
+		vertical-align: middle;
+	}
+}
+
+.stats {
+	display: inline-block;
+
+	img {
+		margin-right: .25rem;
 	}
 }

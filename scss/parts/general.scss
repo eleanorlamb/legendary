@@ -83,9 +83,10 @@ select {
 .cookie-warning {
 	background-color: $marvel;
 	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.25) 5px, rgba(255,255,255,.25) 10px);	border: 0;
-	padding: 1rem;
 	color: $white;
 	border: 3px solid $marvel;
+	margin-top: 3rem;
+	padding: 1rem;
 
 	a {
 		color: $white;

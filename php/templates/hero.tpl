@@ -3,19 +3,17 @@
 		<input type="checkbox" name="hero-require" />
 		<input type="checkbox" name="hero-ban" />
 	</div> <!-- .hidden -->
+	
+	<div class="hero-icon">
+		<?php if( $hero[ 'team' ] != 7 ): ?>
+			<img src="img/icons/teams/<?php echo $hero[ 'team' ] ?>.png">
+		<?php endif; ?>
+	</div>
 
 	<div class="fancy-checkbox" data-fancy-checkbox='0'>
 	</div> <!-- .fancy-checkbox -->
 
 	<div class="name">
-		<span class="hero-icon">
-			<?php if( $hero[ 'team' ] != 7 ): ?>
-				<img src="img/icons/teams/<?php echo $hero[ 'team' ] ?>.png">
-			<?php endif; ?>
-		</span>
-
-		<span class="hero-name">
-			<?php echo $hero[ 'name' ]; ?>
-		</span>
+		<?php echo $hero[ 'name' ]; ?>
 	</div>
 </div> <!-- .hero -->

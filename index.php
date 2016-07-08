@@ -82,10 +82,31 @@
 
 			<div class="results row">
 				<div class="large-4 columns heroes">
-					<h3>Heroes</h3>
+					<div class="heroes-wrapper">
+						<h3>Heroes</h3>
 
-					<div id="heroes-result" class="row"></div>
-				</div> 
+						<div id="heroes-result" class="row"></div>
+					</div> <!-- .heroes-wrapper -->
+				</div> <!-- .heroes -->
+
+				<div class="large-4 columns villains">
+				</div> <!-- .villains -->
+
+				<div class="large-4 columns schemes">
+					<div class="scheme-wrapper">
+						<h3>Scheme</h3>
+
+						<div id="scheme-result" class="row"></div>
+					</div> <!-- .scheme-wrapper -->
+				</div> <!-- .scheme -->
+
+				<div class="large-4 columns villains">
+					<div class="villains-wrapper">
+						<div id="mastermind-result" class="row"></div>
+
+						<div id="villains-result" class="row"></div>
+					</div> <!-- .villains-wrapper -->
+				</div> <!-- .scheme -->
 			</div> <!-- .results -->
 
 			<div class="cookie-warning">

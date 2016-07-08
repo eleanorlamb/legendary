@@ -4,28 +4,28 @@
 include_once( 'cfg/config.php' );
 
 $setup[ 1 ][ 'heroes' ] = 3;
-$setup[ 1 ][ 'villians' ] = 4;
+$setup[ 1 ][ 'villains' ] = 4;
 $setup[ 1 ][ 'henchmen' ] = 2;
 $setup[ 1 ][ 'bystanders' ] = 12;
 
 $setup[ 2 ][ 'heroes' ] = 5;
-$setup[ 2 ][ 'villians' ] = 2;
+$setup[ 2 ][ 'villains' ] = 2;
 $setup[ 2 ][ 'henchmen' ] = 1;
 $setup[ 2 ][ 'bystanders' ] = 2;
 
 $setup[ 3 ][ 'heroes' ] = 5;
-$setup[ 3 ][ 'villians' ] = 3;
+$setup[ 3 ][ 'villains' ] = 3;
 $setup[ 3 ][ 'henchmen' ] = 1;
 $setup[ 3 ][ 'bystanders' ] = 8;
 
 $setup[ 4 ][ 'heroes' ] = 5;
-$setup[ 4 ][ 'villians' ] = 3;
+$setup[ 4 ][ 'villains' ] = 3;
 $setup[ 4 ][ 'henchmen' ] = 2;
 $setup[ 4 ][ 'bystanders' ] = 8;
 
 
 $setup[ 5 ][ 'heroes' ] = 5;
-$setup[ 5 ][ 'villians' ] = 4;
+$setup[ 5 ][ 'villains' ] = 4;
 $setup[ 5 ][ 'henchmen' ] = 2;
 $setup[ 5 ][ 'bystanders' ] = 12;
 
@@ -102,4 +102,14 @@ function stringify( $array ) {
 
 	// Remove the ending commma
 	return trim( $temp, ',' );
+}
+
+function iconStrength( $number ) {
+	if( $number >= 9 ) {
+		return "high";
+	} else if ( $number >= 4 ) {
+		return "medium";
+	} else {
+		return "low";
+	}
 }

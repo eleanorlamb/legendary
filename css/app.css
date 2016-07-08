@@ -5404,9 +5404,10 @@ select {
   background-color: #e23636;
   background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.25) 5px, rgba(255, 255, 255, 0.25) 10px);
   border: 0;
-  padding: 1rem;
   color: #fefefe;
   border: 3px solid #e23636;
+  margin-top: 3rem;
+  padding: 1rem;
 }
 
 .cookie-warning a {
@@ -5547,13 +5548,71 @@ select {
   display: inline-block;
 }
 
-.hero .hero-icon {
+.hero-icon {
   display: inline-block;
   width: 20px;
 }
 
-.hero .hero-icon img {
+.hero-icon img {
   margin-top: -1px;
+}
+
+.hero-result span {
+  font-size: 2rem;
+}
+
+.hero-result .hero-icon {
+  width: 35px;
+}
+
+.hero-result .name {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hero-result .provides {
+  display: inline-block;
+}
+
+.hero-result .stats {
+  display: none;
+}
+
+.heroes-wrapper {
+  background-color: #eee;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.25) 5px, rgba(255, 255, 255, 0.25) 10px);
+  border: 0;
+  border: 3px solid #0a0a0a;
+  padding: 1rem;
+}
+
+.skill-icon {
+  display: inline-block;
+  text-align: center;
+  min-width: 30px;
+}
+
+.skill-icon.high {
+  width: 40px;
+}
+
+.skill-icon.low {
+  min-width: 20px;
+  width: 20px;
+}
+
+.skill-icon img {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.stats {
+  display: inline-block;
+}
+
+.stats img {
+  margin-right: .25rem;
 }
 
 .accordion-content {
@@ -5621,4 +5680,16 @@ select {
 
 .accordion-title:hover:after {
   opacity: 0;
+}
+
+.villains-wrapper {
+  background-color: #eee;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.25) 5px, rgba(255, 255, 255, 0.25) 10px);
+  border: 0;
+  border: 3px solid #0a0a0a;
+  padding: 1rem;
+}
+
+.villains-wrapper h3 {
+  color: #e23636;
 }
