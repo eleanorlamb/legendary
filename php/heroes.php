@@ -1,6 +1,6 @@
 <?php
 // Load the DB Connection
-include_once( 'config.php' );
+include_once( 'common.php' );
 
 if( isset( $_POST[ 'operation' ] ) ) {
 	switch( $_POST[ 'operation' ] ) {

@@ -1,7 +1,7 @@
 <?php
 
 // Load the DB Connection
-include( 'config.php' );
+include( 'common.php' );
 
 $sql = 'select id, name from expansions order by id';
 

@@ -1,5 +1,8 @@
 <?php
 
+// Load the DB Connection
+include_once( 'cfg/config.php' );
+
 $setup[ 1 ][ 'heroes' ] = 3;
 $setup[ 1 ][ 'villians' ] = 4;
 $setup[ 1 ][ 'henchmen' ] = 2;
