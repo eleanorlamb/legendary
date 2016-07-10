@@ -27,6 +27,26 @@ if( isset( $_POST[ 'operation' ] ) ) {
 
 			// Pick a random scheme
 			$scheme = $schemes[ mt_rand( 0, count( $schemes) - 1 ) ];
+				
+			$html = '<div class="large-12 columns">';
+			$html .= 	'<h3>' . $scheme[ 'name' ] . '</h3>';
+		
+			if( strlen( $scheme[ 'setup' ] ) > 0 ) {
+//				$html .=	'<h6>Setup</h6>';
+				$html .=	'<div class="scheme-text"><h6>Setup:</h6>' . $scheme[ 'setup' ] . '</div>';
+			}
+
+			if( strlen( $scheme[ 'twist' ] ) > 0 ) {
+//				$html .=	'<h6>Twist</h6>';
+				$html .=	'<div class="scheme-text"><h6>Twist:</h6>' . $scheme[ 'twist' ] . '</div>';	
+			}
+
+			if( strlen( $scheme[ 'special_rules' ] ) > 0 ) {
+//				$html .=	'<h6>Special Rules</h6>';
+				$html .=	'<div class="scheme-text"><h6>Special Rules:</h6>' . $scheme[ 'special_rules' ] . '</div>';
+			}
+
+			$html .= '</div>';
 
 			$json = array(
 				'heroes' 				=> ( $scheme[ 'heroes' ] > 0 ? ( int ) $scheme['heroes'] : 0 ),
@@ -34,6 +54,7 @@ if( isset( $_POST[ 'operation' ] ) ) {
 				'required_villains' 	=> ( $scheme[ 'required_villain' ] > 0 ? ( int ) $scheme['required_villain'] : 0 ),
 				'henchment' 			=> ( $scheme[ 'henchmen' ] > 0 ? ( int ) $scheme['henchmen'] : 0 ),
 				'scheme'				=> ( int ) $scheme[ 'id'],
+				'html'					=> ( $html ),
 				);
 
 			echo json_encode( $json );

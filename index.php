@@ -89,13 +89,8 @@
 					</div> <!-- .heroes-wrapper -->
 				</div> <!-- .heroes -->
 
-				<div class="large-4 columns villains">
-				</div> <!-- .villains -->
-
 				<div class="large-4 columns schemes">
 					<div class="scheme-wrapper">
-						<h3>Scheme</h3>
-
 						<div id="scheme-result" class="row"></div>
 					</div> <!-- .scheme-wrapper -->
 				</div> <!-- .scheme -->
@@ -104,7 +99,11 @@
 					<div class="villains-wrapper">
 						<div id="mastermind-result" class="row"></div>
 
+						<h3 class="villains">Villains</h3>
 						<div id="villains-result" class="row"></div>
+
+						<h3 class="henchmen">Henchmen</h3>
+						<div id="henchmen-result" class="row"></div>
 					</div> <!-- .villains-wrapper -->
 				</div> <!-- .scheme -->
 			</div> <!-- .results -->

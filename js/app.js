@@ -108,23 +108,30 @@ $( '#randomize-button' ).click( function() {
 	var heroesBan = Cookies.getJSON( 'hero-ban' );
 
 	$.post( 'php/schemes.php', { operation: 'new', expansions: expansions }, function( scheme ) {
+
 		$.post( 'php/villains.php', { operation: 'mastermind', expansions: expansions }, function( mastermind ) {
 			$( '#mastermind-result' ).html( mastermind.html );	
 
-			$.post( 'php/villains.php', { operation: 'villains', players: $( '#player-select' ).val(), expansions: expansions, schemeReq: scheme.villains, schemeVillains: scheme.required_villains, mastermind: mastermind.leads }, function( villains ) {
-				console.log( villains );
-				$( '#villains-result' ).html( villains.html );
+			$.post( 'php/villains.php', { operation: 'villains', players: $( '#player-select' ).val(), expansions: expansions, schemeReq: scheme.required_villains, schemeVillains: scheme.villains, mastermind: mastermind.leads }, function( villains ) {
+
+				$.post( 'php/villains.php', { operation: 'henchmen', players: $( '#player-select' ).val(), expansions: expansions, schemeReq: scheme.required_villains, henchmen: scheme.henchmen, mastermind: mastermind.leads }, function( henchmen ) {
+						$( '#henchmen-result' ).html( henchmen.html );
+					
+						$.post( 'php/heroes.php', { operation: 'generate', players: $( '#player-select' ).val(), expansions: expansions, heroRequire: heroesRequire, heroBan: heroesBan, addHeroes: scheme.heroes }, function( heroes ) {
+							$( '#heroes-result' ).html( heroes );
+
+							$( '#villains-result' ).html( villains.html );
+
+							$( '#scheme-result' ).html( scheme.html );
+					
+							$( '#randomize-button' ).removeClass( 'disabled' ).prop( 'disabled', false );					
+						});
+				}, 'json' );
 			}, 'json' );
 		}, 'json' );
 
-//		$( '#scheme-result' ).html( result.html );
 	}, 'json' );
 
-	$.post( 'php/heroes.php', { operation: 'generate', players: $( '#player-select' ).val(), expansions: expansions, heroRequire: heroesRequire, heroBan: heroesBan }, function( result ) {
-		$( '#heroes-result' ).html( result );
-
-		$( '#randomize-button' ).removeClass( 'disabled' ).prop( 'disabled', false );
-	});
 });
 
 

@@ -40,13 +40,16 @@ if( isset( $_POST[ 'operation' ] ) ) {
 			// Get the number of players	
 			$players = $_POST[ 'players' ];
 
+			// Do we need additional heroes?
+			$heroCount = $setup[ $players ][ 'heroes' ] + ( isset( $_POST[ 'addHeroes'] ) ? $_POST[ 'addHeroes'] : 0 );
+
 			// Get our eligable heroes
 			$team[] = heroQuery( $expansions, $require, $ban );
 
 			$ids = $team[ 0 ][ 'id' ] . ',';
 
 			// Fill up the rest of our heroes
-			for( $i = 1; $i < $setup[ $players][ 'heroes']; $i++ ) {
+			for( $i = 1; $i < $heroCount; $i++ ) {
 				// Use up all of the required heroes first
 				if( isset( $_POST[ 'heroRequire' ] ) && $i < count( $_POST[ 'heroRequire' ] ) ) {
 					$team[] = heroQuery( $expansions, $require, $ban, rtrim( $ids, ',' ) );
@@ -93,18 +96,10 @@ function heroQuery( $expansions, $require = null, $ban = null, $idExclude = null
 	}
 
 	// Begin our SQL statement
-	$sql = 'select * from heroes where ';
+	$sql = 'select * from heroes where expansion in (' . $expansions . ')';
 
 	for( $i = 0; $i < count( $where ); $i++ ) {
-		$sql .= $where[ $i ];
-
-		if( $i + 1 < count( $where ) ) {
-			$sql .= ' and ';
-		}
-	}
-
-	if( count( $where ) == 0 ) {
-		$sql .= '1';
+		$sql .= ' and ' . $where[ $i ];
 	}
 
 	// Execute the query
@@ -115,7 +110,7 @@ function heroQuery( $expansions, $require = null, $ban = null, $idExclude = null
 		$heroes[] = $hero;		
 	}
 
-	// Grab our second hero from the results
+	// Grab a random hero from the results
 	if( count( $heroes ) === 0 ) {
 		$hero = -1;
 	} else if( count( $heroes ) === 1 ) {

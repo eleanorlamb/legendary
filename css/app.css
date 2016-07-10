@@ -5580,11 +5580,16 @@ select {
 }
 
 .heroes-wrapper {
-  background-color: #eee;
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.25) 5px, rgba(255, 255, 255, 0.25) 10px);
-  border: 0;
-  border: 3px solid #0a0a0a;
-  padding: 1rem;
+  /*
+	background-color: #eee;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.25) 5px, rgba(255,255,255,.25) 10px);	border: 0;
+	border: 3px solid $black;
+	padding: 1rem;
+*/
+}
+
+.heroes-wrapper h3 {
+  font-size: 2.5rem;
 }
 
 .skill-icon {
@@ -5683,6 +5688,29 @@ select {
 }
 
 .villains-wrapper {
+  /*
+	background-color: #eee;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.25) 5px, rgba(255,255,255,.25) 10px);	border: 0;
+	border: 3px solid $black;
+	padding: 1rem;
+*/
+}
+
+.villains-wrapper h3 {
+  color: #e23636;
+  font-size: 2.5rem;
+}
+
+.villains-wrapper h3.henchmen {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.villains-wrapper h3.villains {
+  font-size: 1.5rem;
+}
+
+.scheme-wrapper {
   background-color: #eee;
   background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255, 255, 255, 0.25) 5px, rgba(255, 255, 255, 0.25) 10px);
   border: 0;
@@ -5690,6 +5718,17 @@ select {
   padding: 1rem;
 }
 
-.villains-wrapper h3 {
-  color: #e23636;
+.scheme-wrapper h3 {
+  font-size: 2.5rem;
+  color: #BF5FFF;
+}
+
+.scheme-wrapper .scheme-text {
+  margin-bottom: 1rem;
+}
+
+.scheme-wrapper .scheme-text h6 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: .5rem;
 }
